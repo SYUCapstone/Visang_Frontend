@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 전체 컨테이너 스타일 */
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* 상단 바 스타일 */
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #ffcccc;
+  color: #d9534f;
+  position: relative;
+  height : 80px;
+}
+
+/* 로고와 텍스트를 담고 있는 컨테이너 */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.call-container {
+  display: flex;
+  align-items: right;
+  padding-right: 10px;
+}
+
+/* 로고 이미지 스타일 */
+.logo-image {
+  width: 30px; /* 로고 크기 */
+  height: 30px;
+  margin-bottom: 5px; /* 로고와 텍스트 사이 간격 */
+}
+
+.header-text {
+  font-size: 12px;
+  font-weight: bold;
   color: white;
+  text-shadow:  2px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-button svg {
+  margin-right: 4px;
+}
+
+/* 지도 영역 스타일 */
+.map-container {
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-color: #e0e0e0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-status {
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* 지도 핀 스타일 */
+.map-pin {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: #d9534f;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* 하단 버튼들 스타일 */
+.bottom-bar {
+  position: absolute;
+  bottom: 10px; /* 지도 하단에서 10px 위로 위치 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.category-button {
+  outline: 0.5px solid grey;
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  font-size: 13px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #ffcccc;
+  font-weight: bold;
+  color: #333;
+}
+
+.hospital-button {
+  outline: 0.5px solid grey;
+  flex: 2;
+  margin: 0 5px;
+  padding: 13px 15px;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  color: #ffffff; 
+}
+
+.hospital-button.emergency{
+  background-color: #ff9f9f;
+}
+
+.hospital-button.hospital{
+  background-color: #5a91fe;
+}
+
+.selected {
+  background-color: #6ff58e;
+  font-weight: bold;
 }
