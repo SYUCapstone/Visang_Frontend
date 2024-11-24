@@ -13,10 +13,17 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: #ffcccc;
   color: #d9534f;
   position: relative;
   height : 80px;
+}
+
+.header-bar.emergency{
+  background-color: #ffcccc;
+}
+
+.header-bar.hospital{
+  background-color:#98b8f8;
 }
 
 /* 로고와 텍스트를 담고 있는 컨테이너 */
@@ -36,7 +43,7 @@
 
 /* 로고 이미지 스타일 */
 .logo-image {
-  width: 30px; /* 로고 크기 */
+  width: 45px; /* 로고 크기 */
   height: 30px;
   margin-bottom: 5px; /* 로고와 텍스트 사이 간격 */
 }
@@ -110,26 +117,12 @@
   transform: translateX(-50%);
   display: flex;
   justify-content: space-around;
-  width: 90%;
-}
-
-.category-button {
-  outline: 0.5px solid grey;
-  flex: 1;
-  margin: 0 5px;
-  padding: 10px;
-  font-size: 13px;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  background-color: #ffcccc;
-  font-weight: bold;
-  color: #333;
+  width: 100%;
 }
 
 .hospital-button {
   outline: 0.5px solid grey;
-  flex: 2;
+  flex: 5;
   margin: 0 5px;
   padding: 13px 15px;
   font-size: 17px;
@@ -148,7 +141,48 @@
   background-color: #5a91fe;
 }
 
-.selected {
+.category-button {
+  white-space: nowrap;
+  width: 5ch;
+  outline: 0.5px solid grey;
+  flex: 4;
+  margin: 0 5px;
+  padding: 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.category-button.selected {
   background-color: #6ff58e;
   font-weight: bold;
+}
+
+.category-button.emergency{
+  background-color:  #ffcccc;
+}
+
+.category-button.hospital {
+  background-color: #a4c1fc;
+}
+
+.Modal{
+  font-weight: 500;
+  padding : 0px 0px 2px 0px;
+}
+
+.ModalContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width : 100%;
+  margin : 0 auto;
+  padding : 20px;
+}
+
+.ContainerCell{
+  padding: 10px;
+  text-align: left;
 }
