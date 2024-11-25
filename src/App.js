@@ -5,6 +5,7 @@ import Modal from 'react-modal' ;
 import Emergency from './Emergency';
 import Hospital from './Hospital';
 import logo from './img/Logo.png';
+import HospitalList from './components/HospitalList';
 
 // Modal Style
 const customStyles = { 
