@@ -5,7 +5,6 @@ import Modal from 'react-modal' ;
 import Emergency from './Emergency';
 import Hospital from './Hospital';
 import logo from './img/Logo.png';
-import HospitalList from './components/HospitalList';
 
 // Modal Style
 const customStyles = { 
@@ -113,17 +112,15 @@ useEffect(() => {
       >
 
         <h2>{modalContent}</h2>
-        <div className="Modal">{hospitalData.address}</div>
-        <div className="Modal">진료 시간 : {hospitalData.hours}</div>
+        <div className="Modal">서울특별시 서대문구 신촌동 연세로 50-1</div>
+        <div className="Modal">진료 시간 : 08:30 ~ 17:30</div>
         <div className="ModalContainer">
-          {hospitalData.availability.map((item, index) => (
-            <React.Fragment key={index}>
-          <div className="ContainerCell">{item.label} :</div>
-          <div className="ContainerCell">{item.status}</div>
-          </React.Fragment>
-          ))}
+          <div className="ContainerCell">CT : 가능</div><br></br>
+          <div className="ContainerCell">MRI : 가능</div> <br></br>
+          <div className="ContainerCell">소아과 : 가능 :</div><br></br>
+          <div className="ContainerCell">가능여부4 : 가능</div>
           </div>
-        <button onClick={() => handleHospitalCall('010-1234-5678')}>병원 전화 연결</button>
+        <button onClick={() => handleHospitalCall('02-2228-1004')}>병원 전화 연결</button>
       </Modal>
 
       {/* 하단 버튼들 */}
